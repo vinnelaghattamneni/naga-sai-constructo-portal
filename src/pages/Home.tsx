@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import ProductHighlights from "@/components/ProductHighlights";
 
 const Home = () => {
   return (
@@ -7,6 +9,8 @@ const Home = () => {
       <Header />
       <main>
         <Hero />
+        <Features />
+        <ProductHighlights />
       </main>
     </div>
   );
