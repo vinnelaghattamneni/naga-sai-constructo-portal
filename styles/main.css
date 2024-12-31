@@ -18,39 +18,6 @@ body {
   line-height: 1.6;
   background: linear-gradient(109.6deg, rgba(223,234,247,1) 11.2%, rgba(244,248,252,1) 91.1%);
 }
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Full viewport height */
-  background-image: url('public/building_construction_frame_223639_3840x2160.jpg'); /* Image URL here */
-  background-size: cover; /* Make sure image covers the section */
-  background-position: center; /* Center the image */
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Overlay with 50% opacity */
-}
-
-.container {
-  position: relative;
-  z-index: 2; /* Ensures text stays on top of overlay */
-  color: white; /* Make text color white for contrast */
-  text-align: center;
-  padding: 50px 20px;
-}
-
-h1 {
-  font-size: 3rem; /* Adjust font size as needed */
-}
-
-p {
-  font-size: 1.25rem;
-}
 
 main {
   flex: 1 0 auto;
@@ -117,8 +84,7 @@ nav {
 /* Hero Section */
 .hero {
   padding: 8rem 0 4rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('public/building_construction_frame_223639_3840x2160.jpg') center/cover;
+  background: background-image: url('https://images.wallpaperscraft.com/image/single/building_construction_frame_223639_3840x2160.jpg'); center/cover;
   text-align: center;
   color: white;
   position: relative;
