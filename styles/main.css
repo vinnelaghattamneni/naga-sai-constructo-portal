@@ -118,7 +118,7 @@ nav {
 .hero {
   padding: 8rem 0 4rem;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('https://images.unsplash.com/photo-1516216628859-9c66c0152f0f?auto=format&fit=crop&w=1920&q=80') center/cover;
+              url('public/building_construction_frame_223639_3840x2160.jpg') center/cover;
   text-align: center;
   color: white;
   position: relative;
