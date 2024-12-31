@@ -1,4 +1,13 @@
-/* Base styles */
+:root {
+  --primary: #9b87f5;
+  --primary-dark: #7E69AB;
+  --accent: #F97316;
+  --accent-light: #F2FCE2;
+  --neutral: #8E9196;
+  --bg-light: #F1F1F1;
+  --text-dark: #333333;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -35,7 +44,7 @@ nav {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: #1A1F2C;
+  color: var(--primary-dark);
   font-weight: bold;
   font-size: 1.25rem;
   transition: transform 0.3s ease;
@@ -52,15 +61,77 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: #4a5568;
-  transition: color 0.2s, transform 0.2s;
+  color: var(--neutral);
+  transition: all 0.2s;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
 
 .nav-links a:hover {
-  color: #1A1F2C;
+  color: var(--primary);
   background-color: rgba(155, 135, 245, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Contact Form Styles */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  padding: 2rem;
+  background: var(--bg-light);
+  border-radius: 0.5rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--bg-light);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.submit-btn {
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background: var(--primary);
   transform: translateY(-2px);
 }
 
@@ -218,7 +289,7 @@ nav {
 
 /* Footer Styles */
 .footer {
-  background: #1A1F2C;
+  background: linear-gradient(to right, #243949 0%, #517fa4 100%);
   color: white;
   padding: 4rem 0 2rem;
 }
@@ -271,20 +342,7 @@ nav {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .hero p {
-    font-size: 1.125rem;
-  }
-  
-  .features-grid,
-  .products-grid {
+  .contact-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .nav-links {
-    display: none;
   }
 }
