@@ -84,7 +84,7 @@ nav {
 /* Hero Section */
 .hero {
   padding: 8rem 0 4rem;
-  background: background-image: url('assets/hero.jpg'); center/cover;
+  background-image: url('assets/hero.jpg'); center/cover;
   text-align: center;
   color: white;
   position: relative;
