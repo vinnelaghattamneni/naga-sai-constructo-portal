@@ -17,3 +17,25 @@ window.addEventListener('scroll', function() {
     header.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
   }
 });
+
+// Add animation to feature cards on scroll
+const observeElements = (elements, className) => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(className);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(element => observer.observe(element));
+};
+
+// Observe feature cards and product cards
+document.addEventListener('DOMContentLoaded', () => {
+  const featureCards = document.querySelectorAll('.feature-card');
+  const productCards = document.querySelectorAll('.product-card');
+  
+  observeElements(featureCards, 'animate-fade-up');
+  observeElements(productCards, 'animate-fade-up');
+});
