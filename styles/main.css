@@ -1,3 +1,5 @@
+@import 'components/header.css';
+
 /* Base Styles */
 :root {
   --primary: #9b87f5;
@@ -19,17 +21,8 @@ body {
   background: linear-gradient(109.6deg, rgba(223,234,247,1) 11.2%, rgba(244,248,252,1) 91.1%);
 }
 
-/* Header styles */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 50;
-  height: 72px;
-  transition: all 0.3s ease;
+main {
+  padding-top: 72px;
 }
 
 .container {
@@ -37,77 +30,6 @@ header {
   margin: 0 auto;
   padding: 0 1.5rem;
   width: 100%;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  text-decoration: none;
-  color: var(--primary);
-  font-weight: 600;
-  font-size: 1.25rem;
-  transition: color 0.2s ease;
-}
-
-.logo:hover {
-  color: var(--primary-dark);
-}
-
-.logo svg {
-  width: 24px;
-  height: 24px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--neutral);
-  font-weight: 500;
-  transition: all 0.2s ease;
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-.nav-links a:hover {
-  color: var(--primary);
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--primary);
-  transition: width 0.2s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-  
-  .mobile-menu {
-    display: block;
-  }
 }
 
 /* Hero Section */

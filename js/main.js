@@ -1,3 +1,17 @@
+// Mobile menu functionality
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+const menuIcon = document.querySelector('.menu-icon');
+
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+  if (mobileMenu.classList.contains('active')) {
+    menuIcon.innerHTML = '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+  } else {
+    menuIcon.innerHTML = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+  }
+});
+
 // Add smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
