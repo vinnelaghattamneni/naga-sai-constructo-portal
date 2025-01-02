@@ -21,6 +21,7 @@ body {
 
 main {
   flex: 1 0 auto;
+  margin-top: 72px; /* Height of the header */
 }
 
 /* Header styles */
@@ -32,53 +33,21 @@ header {
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 50;
+  height: 72px;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  width: 100%;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: var(--primary-dark);
-  font-weight: bold;
-  font-size: 1.25rem;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.05);
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--neutral);
-  transition: all 0.2s;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-}
-
-.nav-links a:hover {
-  color: var(--primary);
-  background-color: rgba(155, 135, 245, 0.1);
-  transform: translateY(-2px);
+  height: 100%;
 }
 
 /* Hero Section */
@@ -286,13 +255,34 @@ nav {
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
+    padding: 0 1rem;
   }
   
   .hero p {
     font-size: 1.125rem;
+    padding: 0 1rem;
   }
   
-  .contact-grid {
+  .features-grid,
+  .products-grid,
+  .footer-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .features-grid,
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
